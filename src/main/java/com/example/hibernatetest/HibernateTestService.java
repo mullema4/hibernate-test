@@ -5,12 +5,15 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+
 @Service
 @RequiredArgsConstructor
 public class HibernateTestService implements ApplicationRunner {
 
     private final PostRepository repository;
 
+    @Transactional
     @Override
     public void run(ApplicationArguments args) {
         repository.findAll();
