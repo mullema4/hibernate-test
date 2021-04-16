@@ -8,7 +8,6 @@ public class Post {
     @GeneratedValue
     private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "post")
+    @OneToOne(fetch = FetchType.LAZY)
     private PostDetails details;
 }
