@@ -10,7 +10,7 @@ class HibernateTestService(val repository: PostRepository) : ApplicationRunner {
 
     @Transactional
     override fun run(args: ApplicationArguments) {
-        repository!!.findAll()
+        repository.findAll()
     }
 
     /*
