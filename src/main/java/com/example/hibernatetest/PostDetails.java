@@ -7,7 +7,6 @@ public class PostDetails {
     @Id
     private Long id;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @MapsId
+    @OneToOne(mappedBy = "details", cascade = CascadeType.ALL)
     private Post post;
 }
