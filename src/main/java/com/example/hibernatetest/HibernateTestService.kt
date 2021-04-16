@@ -1,30 +1,15 @@
-package com.example.hibernatetest;
+package com.example.hibernatetest
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.stereotype.Service;
-
-import javax.transaction.Transactional;
+import org.springframework.boot.ApplicationArguments
+import org.springframework.boot.ApplicationRunner
+import org.springframework.stereotype.Service
+import javax.transaction.Transactional
 
 @Service
-@RequiredArgsConstructor
-public class HibernateTestService implements ApplicationRunner {
-
-    private final PostRepository repository;
+class HibernateTestService(val repository: PostRepository) : ApplicationRunner {
 
     @Transactional
-    @Override
-    public void run(ApplicationArguments args) {
-        repository.findAll();
+    override fun run(args: ApplicationArguments) {
+        repository!!.findAll()
     }
-
-    /*
-    Hibernate:
-    select
-        post0_.id as id1_0_,
-        post0_.post as post2_0_
-    from
-        post post0_
-    */
 }

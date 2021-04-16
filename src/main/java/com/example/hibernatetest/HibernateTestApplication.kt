@@ -1,13 +1,12 @@
-package com.example.hibernatetest;
+package com.example.hibernatetest
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
 
 @SpringBootApplication
-public class HibernateTestApplication {
+class HibernateTestApplication {
+}
 
-    public static void main(String[] args) {
-        SpringApplication.run(HibernateTestApplication.class, args);
-    }
-
+fun main(args: Array<String>) {
+    runApplication<HibernateTestApplication>(*args)
 }

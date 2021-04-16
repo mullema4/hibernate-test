@@ -1,14 +1,14 @@
-package com.example.hibernatetest;
+package com.example.hibernatetest
 
-import javax.persistence.*;
+import javax.persistence.*
 
 @Entity
-public class Post {
+class Post {
     @Id
     @GeneratedValue
-    private Long id;
+    private val id: Long? = null
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
     @JoinColumn(name = "post")
-    private PostDetails details;
+    private val details: PostDetails? = null
 }

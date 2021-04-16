@@ -1,12 +1,15 @@
-package com.example.hibernatetest;
+package com.example.hibernatetest
 
-import javax.persistence.*;
+import javax.persistence.CascadeType
+import javax.persistence.Entity
+import javax.persistence.Id
+import javax.persistence.OneToOne
 
 @Entity
-public class PostDetails {
+class PostDetails {
     @Id
-    private Long id;
+    private val id: Long? = null
 
-    @OneToOne(mappedBy = "details", cascade = CascadeType.ALL)
-    private Post post;
+    @OneToOne(mappedBy = "details", cascade = [CascadeType.ALL])
+    private val post: Post? = null
 }
