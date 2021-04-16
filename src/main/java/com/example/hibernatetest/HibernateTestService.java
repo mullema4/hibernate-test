@@ -18,12 +18,10 @@ public class HibernateTestService implements ApplicationRunner {
 
     /*
     Hibernate:
-    select post0_.id as id1_0_
-    from post post0_
-
-    Hibernate:
-    select postdetail0_.post_id as post_id1_1_0_
-    from post_details postdetail0_
-    where postdetail0_.post_id=?
+    select
+        post0_.id as id1_0_,
+        post0_.post as post2_0_
+    from
+        post post0_
     */
 }
